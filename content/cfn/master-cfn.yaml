@@ -377,7 +377,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Handler: index.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.12
       Role: !GetAtt CustomClusterConfigRole.Arn
       Timeout: 900
       Code:
@@ -518,7 +518,7 @@ Resources:
 
           sudo yum update -y
 
-          sudo yum install python3.7 -y
+          sudo yum install python3.12 -y
 
           sudo yum install java-1.8.0-openjdk-devel -y
 
@@ -546,7 +546,7 @@ Resources:
 
           wget https://bootstrap.pypa.io/get-pip.py
 
-          su -c "python3.7 get-pip.py --user" -s /bin/sh ec2-user
+          su -c "python3.12 get-pip.py --user" -s /bin/sh ec2-user
 
           su -c "/home/ec2-user/.local/bin/pip3 install boto3 --user" -s /bin/sh ec2-user
 
@@ -571,7 +571,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Handler: index.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.12
       Role: !GetAtt CustomClusterConfigRole.Arn
       Timeout: 900
       Code:
@@ -622,7 +622,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Handler: index.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.12
       Role: !GetAtt CustomClusterConfigRole.Arn
       Timeout: 900
       Code:
